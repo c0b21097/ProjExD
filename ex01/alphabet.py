@@ -27,6 +27,7 @@ def shutudai(alphabet):
     return abs_chr
 
 def kaito(ans):
+    st=datetime.datetime.now()
     num = int(input("欠損文字はいくつあるでしょう？"))
     if num != num_abs_chr:
         print("残念... もう一度数えましょう")
@@ -44,9 +45,10 @@ def kaito(ans):
                 ans.remove(chr)
         
         else:
+            ed=datetime.datetime.now()
+            print(str((ed-st).seconds)+str("秒"))
             print("欠損文字も含めて正解です！！！") 
             return True
-
     return False        
 
         
