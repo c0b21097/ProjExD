@@ -1,7 +1,7 @@
 import random
 import datetime
 
-num_alph = 26
+num_alph= 26
 num_all_chr = 10
 num_abs_chr = 2
 num_try = 2
