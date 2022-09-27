@@ -10,12 +10,23 @@ def shutudai(alphabet):
     all_chr = random.sample(alphabet,num_all_chr)
     print("対象文字: ",end="")
 
-    for c in (all_chr):
+    for c in all_chr:
         print(c,end=" ")
+    print()
 
     abs_chr = random.sample(all_chr,num_abs_chr)
+    print("表示文字: ",end="")
+
+    for c in all_chr:
+        if c not in abs_chr:
+            print(c,end=" ")
     print()
+    
+    print("デバック用欠損文字: ",end="")
+    return abs_chr
 
 if __name__ == "__main__":
     alphabet = [chr(i+65) for i in range(num_alph)]
-    shutudai(alphabet)
+    abs_chr=shutudai(alphabet)
+    for c in abs_chr:
+        print(c,end=" ")
