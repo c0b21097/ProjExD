@@ -23,10 +23,45 @@ def shutudai(alphabet):
     print()
     
     print("デバック用欠損文字: ",end="")
+    print()
     return abs_chr
+
+def kaito(ans):
+    num=input("欠損文字はいくつあるでしょう？")
+    if num != num_abs_chr:
+        print("残念... もう一度数えましょう")
+
+    else:
+        print("正解！！！　では、欠損している文字を1つずつ入力してください？")
+        
+        for i in range(num):
+            chr=input(f"{i+1}文字を入力してください。")
+            if chr not in abs_chr:
+                print("残念、また挑戦してください。")
+                return False
+
+            else:
+                ans.remove(chr)
+        
+        else:
+            print("欠損文字も含めて正解です！！！") 
+            return True
+
+    return False        
+
+        
+
 
 if __name__ == "__main__":
     alphabet = [chr(i+65) for i in range(num_alph)]
     abs_chr=shutudai(alphabet)
     for c in abs_chr:
         print(c,end=" ")
+
+        ret=kaito(abs_chr)
+        
+        if ret:
+            break
+
+        else:
+            print("-"*20)
