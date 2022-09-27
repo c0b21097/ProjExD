@@ -7,7 +7,7 @@ num_abs_chr = 2
 num_try = 2
 
 def shutudai(alphabet):
-    all_chr = random.sample(alphabet,num_all_chr)
+    all_chr= random.sample(alphabet,num_all_chr)
     print("対象文字: ",end="")
 
     for c in all_chr:
