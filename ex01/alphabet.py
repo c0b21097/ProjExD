@@ -27,12 +27,12 @@ def shutudai(alphabet):
     return abs_chr
 
 def kaito(ans):
-    num=input("欠損文字はいくつあるでしょう？")
+    num = int(input("欠損文字はいくつあるでしょう？"))
     if num != num_abs_chr:
         print("残念... もう一度数えましょう")
 
     else:
-        print("正解！！！　では、欠損している文字を1つずつ入力してください？")
+        print("正解！！！　では、欠損している文字を1つずつ入力してください。")
         
         for i in range(num):
             chr=input(f"{i+1}文字を入力してください。")
@@ -55,8 +55,8 @@ def kaito(ans):
 if __name__ == "__main__":
     alphabet = [chr(i+65) for i in range(num_alph)]
     abs_chr=shutudai(alphabet)
-    for c in abs_chr:
-        print(c,end=" ")
+    for c in range(num_try):
+        abs_chr = shutudai(alphabet)
 
         ret=kaito(abs_chr)
         
